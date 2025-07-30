@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Parkinsans:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Parkinsans:wght@300..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.container-fluid {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+  padding: 100px 50px;
+}
 
-.container{
-  
+.hero{
+    background-image: url('./hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0px 20px 0px;
 }
