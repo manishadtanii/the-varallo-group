@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Arrow from "./Arrow";
 
-function Button({text, link}) {
+function Button({text, link, arrowClass,color}) {
   return (
     <Link
       to={link}
-      className="flex gap-1"
+      className="flex gap-1 text-black"
     >
       <div className="text bg-secondary text-xl px-4 leading-[44px] rounded-[50px]">{text}</div>
-      <Arrow customClass="bg-secondary -rotate-45"/>
+      {arrowClass && <Arrow customClass="bg-secondary -rotate-45" />}
     </Link>
   );
 }
