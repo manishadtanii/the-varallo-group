@@ -48,7 +48,7 @@ const AboutSection = () => {
                 <img
                   src="./about-home.png"
                   alt="Expert"
-                  className="rounded-2xl shadow-xl w-full max-w-xl object-cover"
+                  className="rounded-2xl w-full max-w-xl object-cover"
                 />
               </motion.div>
               {/* Right Column */}

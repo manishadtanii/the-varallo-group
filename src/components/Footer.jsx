@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-[url('https://the-varallo-group.vercel.app/footer-bg.jpg')] bg-cover bg-center text-white relative pb-[250px] overflow-hidden">
+    <footer className="bg-[url('https://the-varallo-group.vercel.app/footer-bg.jpg')] bg-cover bg-center text-white relative  overflow-hidden">
      <div className="container-fluid">
       <div className="max-w-6xl mx-auto px-6 text-center">
   {/* Heading */}
@@ -111,7 +111,7 @@ export default function Footer() {
       </div>
 
       {/* Giant Watermark Text */}
-      <div className="text-[320px] font-manrope font-medium absolute bottom-[-100px] right-0 opacity-10">©TVG - 2025</div> 
+      {/* <div className="text-[320px] font-manrope font-medium absolute bottom-[-100px] right-0 opacity-10">©TVG - 2025</div>  */}
     
     </footer>
   );
