@@ -3,6 +3,7 @@ import Slider from "react-slick";
 
 import Arrow from "../../components/Arrow";
 import Button from "../../components/Button";
+import { motion } from "framer-motion";
 
 const smartData = [
   {
@@ -122,71 +123,97 @@ function PrevArrow(props) {
 }
 
 export default function SmartSlider() {
-const settings = {
-  dots: false,
-  infinite: false,
-  speed: 600,
-  slidesToShow: 2,
-  slidesToScroll: 1,
-  centerMode: true,
-  autoplay: true,
-  autoplaySpeed: 3000, // 3 seconds
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        centerMode: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 600,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+    autoplay: true,
+    autoplaySpeed: 3000, // 3 seconds
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+        },
       },
-    },
-  ],
-};
-
-
-
+    ],
+  };
 
   return (
     <section className="bg-gradient-to-br from-[#0052B9] to-[#38ABD0] text-white py-20 relative">
-        <img src="" alt="" />
+      <img src="" alt="" />
       <div className="container- ps-[100px]">
         <div className="flex items-stretch">
-          <div className="md:w-[40%]  flex flex-col justify-between  px-6" >
-            <div className="" data-aos="fade-up">
-                <h2 className="text-h2 font-medium leading-tight mb-4">
-              Smart Support.
-              <br />
-              Seamless Solutions.
-            </h2>
+          <motion.div
+            className="md:w-[40%] flex flex-col justify-between px-6"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-h2 font-medium leading-tight mb-4">
+                Smart Support.
+                <br />
+                Seamless Solutions.
+              </h2>
 
-            <div className="flex items-center gap-2 mb-8">
-              <Button
-                text="Schedule a Consultation"
-                color={"text-white"}
-                arrowClass={"sd"}
-                link={"/contact"}
-              />
-            </div>
-            </div>
+              <div className="flex items-center gap-2 mb-8">
+                <Button
+                  text="Schedule a Consultation"
+                  color={"text-white"}
+                  arrowClass={"sd"}
+                  link={"/contact"}
+                />
+              </div>
+            </motion.div>
 
-            <p className="text-white font-manrope text-xl md:max-w-[500px]" data-aos="fade-up" data-aos-delay="1000">
+            <motion.p
+              className="text-white font-manrope text-xl md:max-w-[500px]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               At The Varallo Group, our services are built to simplify,
               strengthen and scale your operations. Whether you’re a court
               reporting firm, law practice or professional organization, our
               expertise meets your needs right where you are and right when you
               need it.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="md:w-[60%]">
+          <motion.div
+            className="md:w-[60%]"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <div className="relative">
               <Slider {...settings}>
                 {smartData.map((item, i) => (
                   <div key={i} className="px-4">
-                    <div className="relative rounded-xl overflow-hidden">
+                    <motion.div
+                      className="relative rounded-xl overflow-hidden"
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: i * 0.2 }}
+                      viewport={{ once: true }}
+                    >
                       <img
                         src={item.image}
                         alt={item.title}
@@ -197,15 +224,17 @@ const settings = {
                           <h4 className="font-medium text-p font-manrope mb-1">
                             {item.title}
                           </h4>
-                          <p className="font-medium text-base leading-6 text-[#FFFFFFA1]">{item.desc}</p>
+                          <p className="font-medium text-base leading-6 text-[#FFFFFFA1]">
+                            {item.desc}
+                          </p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 ))}
               </Slider>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react"
+
 // import logo from "../assets/logo.png"; // Adjust as needed
 
 const Header = () => {
@@ -9,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="bg-black text-white sticky top-0 z-50">
-      <div className=" mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-[1600px] mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div>
           <img src='./logo.png' alt="Logo" className="h-14" />

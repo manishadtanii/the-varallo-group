@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Arrow from "../../components/Arrow";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -81,191 +82,59 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="testimonials bg-white py-20  relative text-center">
-      <h2 className="text-h2 font-medium font-parkinsans text-gray-900 mb-12" data-aos="fade-up">
-        Real Stories, Real <br />
-        Success with Fintech.
-      </h2>
+    <div className="testimonials bg-white py-20 relative text-center">
+  <motion.h2
+    className="text-h2 font-medium font-parkinsans text-gray-900 mb-12"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+  >
+    Real Stories, Real <br />
+    Success with Fintech.
+  </motion.h2>
 
-      <div className="slider-container relative" data-aos="fade-up" data-aos-delay="1000"> 
-        <Slider {...settings}>
-          {testimonials.map((item, i) => (
-            <div key={i} className="">
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-12 h-12 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-xl  text-tertiary">{item.name}</p>
-                    <p className="text-base font-light text-tertiary">{item.role}</p>
-                  </div>
-                </div>
-                <p className=" text-tertiary text-left  font-medium mb-6 font-manrope text-p leading-8">{item.text}</p>
-                <div className=""><img src="./format_quote.png" className="w-12 ms-auto" alt="" /></div>
+  <motion.div
+    className="slider-container relative"
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8, delay: 0.4 }}
+    viewport={{ once: true }}
+  >
+    <Slider {...settings}>
+      {testimonials.map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: i * 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
+            <div className="flex items-center mb-4">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-12 h-12 rounded-full mr-3"
+              />
+              <div className="text-left">
+                <p className="text-xl text-tertiary">{item.name}</p>
+                <p className="text-base font-light text-tertiary">{item.role}</p>
               </div>
             </div>
-          ))}
-        </Slider>
-        {/* <div className="slider-container">
-          <Slider {...settings}>
+            <p className="text-tertiary text-left font-medium mb-6 font-manrope text-p leading-8">
+              {item.text}
+            </p>
             <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=0'
-                    alt="James T"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      James T
-                    </p>
-                    <p className="text-xs text-gray-400">
-                     Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                 These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
+              <img src="./format_quote.png" className="w-12 ms-auto" alt="" />
             </div>
-            <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=1'
-                    alt="John D"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      John D
-                    </p>
-                    <p className="text-xs text-gray-400">
-                      Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                  These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=2'
-                    alt="Jane S"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      Jane S
-                    </p>
-                    <p className="text-xs text-gray-400">
-                     Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                 These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=0'
-                    alt="James T"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      James T
-                    </p>
-                    <p className="text-xs text-gray-400">
-                     Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                 These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=1'
-                    alt="John D"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      John D
-                    </p>
-                    <p className="text-xs text-gray-400">
-                      Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                  These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="bg-white border border-blue-300 rounded-lg p-6 shadow hover:shadow-md transition-all h-full flex flex-col justify-between">
-                <div className="flex items-center mb-4">
-                  <img
-                    src='https://i.pravatar.cc/60?img=2'
-                    alt="Jane S"
-                    className="w-10 h-10 rounded-full mr-3"
-                  />
-                  <div className="text-left">
-                    <p className="text-sm font-medium text-gray-800">
-                      Jane S
-                    </p>
-                    <p className="text-xs text-gray-400">
-                     Music Enthusiast
-                    </p>
-                  </div>
-                </div>
-                <p className="text-lg text-left text-gray-700 font-medium mb-6">
-                 These earphones make my workouts so much better! They stay in place and deliver amazing sound quality. Totally worth it!
-                </p>
-                <div className="text-3xl font-bold text-left text-gray-900">
-                  “
-                </div>
-              </div>
-            </div>
-           
-          </Slider>
-        </div> */}
-      </div>
-    </div>
+          </div>
+        </motion.div>
+      ))}
+    </Slider>
+  </motion.div>
+</div>
+
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../components/Button";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -29,32 +30,46 @@ export default function FeaturedHighlights() {
   return (
     <section className="bg-grad  text-white">
       <div className="container-fluid space-y-16">
-        {data.map((item, idx) => (
-          <div
-            key={idx}
-            className={`flex flex-col-reverse md:flex-row ${
-              idx % 2 === 1 ? "md:flex-row-reverse" : ""
-            } items-center gap-10`}
-            data-aos="fade-up"
-            data-aos-delay={`${100 + idx * 100}`}
-          >
-            <div className="md:w-1/2">
-              <h2 className="text-h2 font-medium font-parkinsans mb-4">
-                {item.title}
-              </h2>
-              <p className="text-[#FFFFFFA1] mb-6 font-manrope">{item.text}</p>
-              <Button link={item.link} text={item.btnText} key={idx} />
-            </div>
-            <div className="md:w-1/2">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="rounded-xl w-full shadow-xl"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+  {data.map((item, idx) => (
+    <div
+      key={idx}
+      className={`flex flex-col-reverse md:flex-row ${
+        idx % 2 === 1 ? "md:flex-row-reverse" : ""
+      } items-center gap-10`}
+    >
+      {/* Text Section */}
+      <motion.div
+        className="md:w-1/2"
+        initial={{ opacity: 0, x: idx % 2 === 1 ? 50 : -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-h2 font-medium font-parkinsans mb-4">
+          {item.title}
+        </h2>
+        <p className="text-[#FFFFFFA1] mb-6 font-manrope">{item.text}</p>
+        <Button link={item.link} text={item.btnText} key={idx} />
+      </motion.div>
+
+      {/* Image Section */}
+      <motion.div
+        className="md:w-1/2"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <img
+          src={item.img}
+          alt={item.title}
+          className="rounded-xl w-full shadow-xl"
+        />
+      </motion.div>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }

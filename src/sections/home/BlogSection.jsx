@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const blogPosts = [
   {
@@ -26,44 +27,57 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <section className="container-fluid mx-auto px-4 py-20">
-      <h2
-        className="text-h2 font-semibold text-center mb-12 font-parkinsans"
-        data-aos="fade-up"
+   <section className="container-fluid mx-auto px-4 py-20">
+  <motion.h2
+    className="text-h2 font-semibold text-center mb-12 font-parkinsans"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+  >
+    Our Blog
+  </motion.h2>
+
+  <div className="space-y-12 max-w-4xl mx-auto">
+    {blogPosts.map((post, index) => (
+      <motion.div
+        key={index}
+        className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-t pt-10 mb-5"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: index * 0.2 }}
+        viewport={{ once: true }}
       >
-        Our Blog
-      </h2>
-      <div className="space-y-12 max-w-4xl mx-auto">
-        {blogPosts.map((post, index) => (
-          <div
-            key={index}
-            className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-t pt-10 mb-5"
-            data-aos="fade-up"
-            data-aos-delay={`${100+index*100}`}
+        <div className="md:w-[55%]">
+          <h3 className="text-p lg:text-[30px] font-semibold font-manrope mb-5 text-[#262626]">
+            {post.title}
+          </h3>
+          <p className="font-manrope text-lg mb-4">{post.excerpt}</p>
+          <a
+            href={post.link}
+            className="font-manrope text-secondary font-medium underline text-[16px]"
           >
-            <div className="md:w-[55%]">
-              <h3 className="text-p lg:text-[30px] font-semibold font-manrope mb-5 text-[#262626]">
-                {post.title}
-              </h3>
-              <p className="font-manrope text-lg mb-4">{post.excerpt}</p>
-              <a
-                href={post.link}
-                className="font-manrope text-secondary font-medium underline text-[16px]"
-              >
-                Read more
-              </a>
-            </div>
-            <div className="md:w-[45%] flex justify-center md:justify-end">
-              <img
-                src={`./${post.image}`}
-                alt={post.title}
-                className="rounded-xl w-full "
-              />
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+            Read more
+          </a>
+        </div>
+        <motion.div
+          className="md:w-[45%] flex justify-center md:justify-end"
+          initial={{ scale: 0.95, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, delay: index * 0.2 + 0.1 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={`./${post.image}`}
+            alt={post.title}
+            className="rounded-xl w-full"
+          />
+        </motion.div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
   );
 };
 
