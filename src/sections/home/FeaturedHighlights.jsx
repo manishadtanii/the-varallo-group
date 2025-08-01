@@ -63,7 +63,7 @@ export default function FeaturedHighlights() {
         <img
           src={item.img}
           alt={item.title}
-          className="rounded-xl w-full shadow-xl"
+          className="rounded-[50px] w-full"
         />
       </motion.div>
     </div>
