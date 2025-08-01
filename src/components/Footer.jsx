@@ -89,7 +89,8 @@ export default function Footer() {
       transition={{ duration: 0.6, delay: 0.7 }}
       viewport={{ once: true }}
     >
-      <h4 className="text-p lg:text-[28px] font-medium mb-8 font-manrope text-black">
+      <div className="">
+        <h4 className="text-p lg:text-[28px] font-medium mb-8 font-manrope text-black">
         Follow Us
       </h4>
       <div className="flex space-x-4">
@@ -103,6 +104,7 @@ export default function Footer() {
             <i className={`fab fa-${icon}`}></i>
           </motion.a>
         ))}
+      </div>
       </div>
     </motion.div>
   </div>
