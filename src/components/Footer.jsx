@@ -3,7 +3,7 @@ import Button from "./Button"; // Assuming Button is a custom component in your 
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer className="bg-[url('./footer-bg.jpg')] bg-cover bg-center text-white relative pb-[250px] overflow-hidden">
+    <footer className="bg-[url('https://the-varallo-group.vercel.app/footer-bg.jpg')] bg-cover bg-center text-white relative pb-[250px] overflow-hidden">
       <div className="container-fluid">
         <div className="max-w-6xl mx-auto px-6  text-center">
           <h2 className="text-h1 font-medium font-parkinsans mb-5 text-black" data-aos="fade-up">
