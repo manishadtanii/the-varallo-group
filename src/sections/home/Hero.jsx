@@ -9,27 +9,27 @@ const Hero = () => {
     <section className="hero bg-black text-white relative overflow-hidden">
     
 
-      <div className="container mx-auto px-4 py-16 grid lg:grid-cols-2 items-center relative z-10">
+      <div className="container mx-auto px-4  grid lg:grid-cols-2 items-center relative z-10">
         {/* Text Content */}
-        <div className="container-fixed">
-          <h1 className="text-4xl sm:text-5xl  font-parkinsans leading-tight font">
+        <div className="">
+          <h1 className="text-4xl sm:text-5xl  font-parkinsans leading-tight font" data-aos="fade-up" data-aos-delay="100">
             Your Legal Support Partner.
             <br />
             With You At Every Step.
           </h1>
-          <p className="text-gray-300  font-monospace text-xl mt-4">
+          <p className="text-gray-300  font-monospace text-xl mt-4 max-w-[500px]" data-aos="fade-up" data-aos-delay="200">
             From expert court reporting to operations, we’re the steady hand
             behind your firm’s everyday success.
           </p>
 
           {/* CTA */}
-          <div className="mt-4">
+          <div className="mt-10" data-aos="fade-up" data-aos-delay="300">
             
-          <Button text="Schedule a Consultation" link="/pay" />
+          <Button text="Schedule a Consultation" link="/pay" arrowClass={'d'} />
           </div>
           {/* Lower Card on Background */}
-          <div className="relative z-10 mt-16">
-            <div className="font-manrope  bg-[#FFFFFF0A] rounded-xl px-6 py-4 text-white text-sm shadow-lg flex flex-col justify-between gap-2">
+          <div className="relative z-10 mt-20 max-w-[500px]" data-aos="fade-up" data-aos-delay="400">
+            <div className="font-manrope  bg-[#FFFFFF0A] rounded-xl px-6 py-4 text-white text-sm  flex flex-col justify-between gap-2">
               <span className="text-xl"> 
                 Specialized Expertise in Legal, Non-profit and Professional
                 Services

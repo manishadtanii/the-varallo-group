@@ -8,7 +8,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-black text-white">
+    <header className="bg-black text-white sticky top-0 z-50">
       <div className=" mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div>

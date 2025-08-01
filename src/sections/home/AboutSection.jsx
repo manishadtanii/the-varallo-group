@@ -10,7 +10,7 @@ const AboutSection = () => {
         <div className=" mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div className="space-y-8 col-span-2">
-            <div className="flex md:items-center flex-col md:flex-row  gap-5 md:gap-12">
+            <div className="flex md:items-center flex-col md:flex-row  gap-5 md:gap-12" data-aos="fade-up">
               <h2 className="md:w-[50%] text-4xl md:text-5xl font-light leading-tight font-parkinsans">
                 Decades of{" "}
                 <strong className="font-semibold">Experience.</strong>
@@ -39,7 +39,7 @@ const AboutSection = () => {
               />
              </div>
               {/* Right Column */}
-              <div className="space-y-8 md:mt-20 flex flex-col justify-end md:gap-5">
+              <div className="space-y-8 md:mt-20 flex flex-col justify-end md:gap-5" data-aos="fade-left">
                 <div>
                   <h3 className="mb-4 text-h3 font-manrope">What Sets Us Apart</h3>
                   <p className="text-tertiary text-xl  mt-2 ">

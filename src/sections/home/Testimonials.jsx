@@ -48,7 +48,7 @@ function NextArrow(props) {
   const { onClick } = props;
   return (
     <button
-      className="absolute -bottom-14  left-1/2 transform translate-x-6 bg-blue-500 hover:bg-blue-600 text-white  rounded-full"
+      className="absolute -bottom-14  left-1/2 transform translate-x-6 bg-btn hover:bg-blue-600 text-black  rounded-full"
       onClick={onClick}
     >
       <Arrow customClass="" />
@@ -60,7 +60,7 @@ function PrevArrow(props) {
   const { onClick } = props;
   return (
     <button
-      className="absolute -bottom-14 left-1/2 transform -translate-x-12 bg-gray-200 hover:bg-gray-300 text-black  rounded-full"
+      className="absolute -bottom-14 left-1/2 transform -translate-x-12 bg-btn hover:bg-gray-300 text-black  rounded-full"
       onClick={onClick}
     >
       <Arrow customClass="rotate-180" />
@@ -82,12 +82,12 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials bg-white py-20  relative text-center">
-      <h2 className="text-4xl font-bold text-gray-900 mb-12">
+      <h2 className="text-h2 font-medium font-parkinsans text-gray-900 mb-12" data-aos="fade-up">
         Real Stories, Real <br />
         Success with Fintech.
       </h2>
 
-      <div className="slider-container relative  ">
+      <div className="slider-container relative" data-aos="fade-up" data-aos-delay="1000"> 
         <Slider {...settings}>
           {testimonials.map((item, i) => (
             <div key={i} className="">

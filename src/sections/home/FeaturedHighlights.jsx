@@ -27,7 +27,7 @@ const data = [
 
 export default function FeaturedHighlights() {
   return (
-    <section className="bg-gradient-to-br from-[#0052B9] to-[#38ABD0]  text-white">
+    <section className="bg-grad  text-white">
       <div className="container-fluid space-y-16">
         {data.map((item, idx) => (
           <div
@@ -35,6 +35,8 @@ export default function FeaturedHighlights() {
             className={`flex flex-col-reverse md:flex-row ${
               idx % 2 === 1 ? "md:flex-row-reverse" : ""
             } items-center gap-10`}
+            data-aos="fade-up"
+            data-aos-delay={`${100 + idx * 100}`}
           >
             <div className="md:w-1/2">
               <h2 className="text-h2 font-medium font-parkinsans mb-4">

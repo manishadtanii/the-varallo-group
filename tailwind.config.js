@@ -8,7 +8,7 @@ export default {
       },
       colors: {
         primary: "#0052B9",
-        secondary: "#38ABD0",
+        secondary: "#59CEE6",
         tertiary: "#00100D",
       },
       backgroundImage: {

@@ -3,14 +3,14 @@ import Button from "./Button"; // Assuming Button is a custom component in your 
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer className="bg-[url('./footer-bg.jpg')] bg-cover bg-center text-white relative">
+    <footer className="bg-[url('./footer-bg.jpg')] bg-cover bg-center text-white relative pb-[250px] overflow-hidden">
       <div className="container-fluid">
         <div className="max-w-6xl mx-auto px-6  text-center">
-          <h2 className="text-h1 font-medium font-parkinsans mb-5 text-black">
+          <h2 className="text-h1 font-medium font-parkinsans mb-5 text-black" data-aos="fade-up">
             Join hands with experience that delivers.
           </h2>
 
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-center mb-10" data-aos="fade-up" data-aos-delay="">
             <Button arrowClass="m" text="Get Started For Free" />
           </div>
 
@@ -24,11 +24,11 @@ export default function Footer() {
                 Millbury, MA 01527
                </a>
               </p>
-              <div className="rounded-full font-manrope  px-4 py-2 text-white bg-black inline-block">
+              {/* <div className="rounded-full font-manrope  px-4 py-2 text-white bg-black inline-block">
                 <a href="mailto:info@thevarallogroup.com" className="text-base">
                   info@thevarallogroup.com
                 </a>
-              </div>
+              </div> */}
               {/* <select className="bg-black border border-white rounded px-3 py-1">
               <option>English</option>
               <option>Spanish</option>
@@ -133,7 +133,7 @@ export default function Footer() {
       </div>
 
       {/* Giant Watermark Text */}
-      <div className="">©TVG - 2025</div>
+      <div className="text-[320px] font-manrope font-medium absolute bottom-[-100px] right-0 opacity-10">©TVG - 2025</div>
     </footer>
   );
 }

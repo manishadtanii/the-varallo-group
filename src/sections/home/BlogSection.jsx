@@ -27,15 +27,24 @@ const blogPosts = [
 const BlogSection = () => {
   return (
     <section className="container-fluid mx-auto px-4 py-20">
-      <h2 className="text-h2 font-semibold text-center mb-12 font-parkinsans">Our Blog</h2>
+      <h2
+        className="text-h2 font-semibold text-center mb-12 font-parkinsans"
+        data-aos="fade-up"
+      >
+        Our Blog
+      </h2>
       <div className="space-y-12 max-w-4xl mx-auto">
         {blogPosts.map((post, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-t pt-10 mb-5"
+            data-aos="fade-up"
+            data-aos-delay={`${100+index*100}`}
           >
             <div className="md:w-[55%]">
-              <h3 className="text-p lg:text-[30px] font-semibold font-manrope mb-5 text-[#262626]">{post.title}</h3>
+              <h3 className="text-p lg:text-[30px] font-semibold font-manrope mb-5 text-[#262626]">
+                {post.title}
+              </h3>
               <p className="font-manrope text-lg mb-4">{post.excerpt}</p>
               <a
                 href={post.link}
