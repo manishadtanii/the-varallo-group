@@ -9,7 +9,7 @@ import WhyChoose from '../sections/home/WhyChoose'
 
 function Home() {
   return (
-    <div className='home-page'>
+    <div className='home-page overflow-x-hidden'>
       <Hero />
       <AboutSection />
         <SmartSlider />

@@ -9,6 +9,15 @@
   margin: auto;
   padding: 100px 50px;
 }
+.container-c {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+}
+footer .container-fluid {
+  padding: 100px 50px 0px 50px;
+}
 
 .hero {
   background-image: url("https://the-varallo-group.vercel.app/hero-bg.jpg");
@@ -80,3 +89,17 @@
   height: 160px;
   overflow: hidden;
 }
+.foot-text{
+  text-align: center;
+  font-size: clamp(100px, 16.5vw, 400px);
+}
+
+/* Service Page Started ==========------------ */
+.service-hero {
+  background-image: url("https://the-varallo-group.vercel.app/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ------------========== Service Page End ==========------------ */
