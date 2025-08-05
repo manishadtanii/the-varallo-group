@@ -14,7 +14,7 @@ const Header = () => {
       <div className="max-w-[1600px] mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div>
-          <img src='./logo.png' alt="Logo" className="h-14" />
+          <img src='/logo.png' alt="Logo" className="h-14" />
         </div>
 
         {/* Hamburger Button */}

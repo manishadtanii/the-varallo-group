@@ -40,7 +40,7 @@ export default function Footer() {
       transition={{ duration: 0.6, delay: 0.3 }}
       viewport={{ once: true }}
     >
-      <img src="./logo-black.png" alt="Logo" className="w-40 mb-4" />
+      <img src="/logo-black.png" alt="Logo" className="w-40 mb-4" />
       <p className="text-tertiary font-manrope text-xl mb-4">
         <a href="">
           34 Grafton Street, Suite 2 <br />

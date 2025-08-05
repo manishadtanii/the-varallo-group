@@ -89,7 +89,7 @@ const ServicesGrid = () => {
             </div>
 
             {/* Hover content overlay */}
-            <div className="absolute inset-0 p-4 rounded-[25px] bg-black/80 backdrop-blur-sm opacity-0 translate-y-8 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300 z-20 flex flex-col justify-between">
+            <div className="relative z-10 inset-0 p-4 rounded-[25px] bg-black/80 backdrop-blur-sm opacity-0 translate-y-8 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-between h-full">
               <div>
                 <h3 className="font-normal font-parkinsans text-p sm:text-[40px] text-white mb-2">
                   {item.title}
@@ -98,7 +98,7 @@ const ServicesGrid = () => {
                   {item.content}
                 </p>
               </div>
-              <img src="l-arrow.png" className="max-w-[100px] ml-auto" alt="" />
+              <img src="l-arrow.png" className="max-w-[100px] me-auto" alt="" />
             </div>
           </Link>
         ))}

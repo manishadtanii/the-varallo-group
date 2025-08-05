@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Service from "./pages/Service";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Service />} />
+        <Route path="/services/:service-name" element={<ServiceDetails />} />
       </Routes>
       <Footer />
     </Router>
