@@ -26,6 +26,20 @@ export default {
         h3: ["clamp(16px, 5vw, 47px)", { lineHeight: "1.1" }],
         p: ["clamp(14px, 5vw, 24px)", { lineHeight: "1.1" }],
       },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite',
+        'marquee-reverse': 'marquee-reverse 20s linear infinite',
+      },
     },
   },
   plugins: [],
