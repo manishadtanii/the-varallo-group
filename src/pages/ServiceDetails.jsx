@@ -4,6 +4,7 @@ import ServiceOver from "../sections/service-details/ServiceOver";
 import WhatWeProvide from "../sections/service-details/WhatWeProvide";
 import TVGEffect from "../sections/service-details/TVGEffect";
 import ServiceOverview from "../sections/service-details/ServiceOverview";
+import ServiceDetailsHero from "../sections/service-details/serviceDetailsHero";
 
 function ServiceDetails() {
   const { serviceId } = useParams();
@@ -11,6 +12,7 @@ function ServiceDetails() {
   const data = {
     "tvg-management": {
       hero: {
+        name:"TVG  Management",
         title: "Agency Management Services for Court Reporting Firms",
         pera: [
           "It starts from a very simple goal in mind and that's to serve your clients really well and grow at the same time. Running a court reporting firm involves more than just capturing the record, it demands consistent administrative precision, strong client communication and an eye on the bigger business picture. That’s where we come in.",
@@ -92,6 +94,7 @@ function ServiceDetails() {
 
   return (
     <div id="service-details" className="space-y-16">
+      <ServiceDetailsHero data={content.hero} />
       <ServiceOver data={content.Overview} />
       <WhatWeProvide data={content.Provide} />
       <TVGEffect data={content.TvgEffect} />

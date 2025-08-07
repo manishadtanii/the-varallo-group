@@ -1,32 +1,52 @@
 import React from "react";
-
-const stats = [
-  { value: ">1M", label: "Every brand starts" },
-  { value: "60%", label: "Every brand starts" },
-  { value: "77%", label: "Every brand starts" },
-];
+import { motion } from "framer-motion"; // ✅ Import Framer Motion
 
 export default function TVGEffect({ data }) {
   const { title, pera, impactStats } = data;
+
   return (
     <section className="flex justify-center items-center py-20 px-4 bg-white">
-      <div
+      <motion.div
         className="rounded-full bg-white shadow-xl flex flex-col justify-center items-center text-center p-10 md:p-20 relative overflow-hidden w-[700px] h-[700px]"
         style={{
           boxShadow: "0 0 120px 20px rgba(0, 204, 255, 0.2)",
           borderRadius: "9999px",
         }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="font-parkinsans text-h1 font-medium mb-4">
+        <motion.h2
+          className="font-parkinsans text-h1 font-medium mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           {title}
-        </h2>
-        <p className="font- max-w-xl mx-auto mb-10 text-sm md:text-base">
-         {pera}
-        </p>
+        </motion.h2>
+
+        <motion.p
+          className="font-manrope max-w-xl mx-auto mb-10 text-sm md:text-base"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {pera}
+        </motion.p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
           {impactStats.map((item, index) => (
-            <div key={index} className="text-center">
+            <motion.div
+              key={index}
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+            >
               <div
                 className="text-h1 font-parkinsans font-medium text-transparent bg-clip-text"
                 style={{
@@ -39,10 +59,10 @@ export default function TVGEffect({ data }) {
               <div className="text-sm md:text-base font-manrope text-[#000000A1] mt-1">
                 {item.label}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
