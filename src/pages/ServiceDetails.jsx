@@ -301,6 +301,77 @@ function ServiceDetails() {
         },
       ],
     },
+    "tvg-creative": {
+      hero: {
+        name:"TVG Creative",
+        title: "Digital Branding & Marketing for Legal and B2B Professionals",
+        pera: [
+          "Whether you’re launching a new venture or refreshing your digital presence, how you show up matters. In today’s fast-moving world, first impressions aren’t just visual, they're strategic. That’s where TVG Creative steps in. We provide full-spectrum digital marketing, branding and design services customized for the legal and B2B industries. From law firm websites to startup identity kits, we help you cut through the noise, attract the right audience and communicate your value with clarity and style."
+        ],
+        link: "link",
+        images: ["image-1.jpg", "image-1.jpg", "image-1.jpg", "image-1.jpg"],
+      },
+      Overview: {
+        title: "Built to Stand Out. Designed to Perform.",
+        pera: [
+          "In a market where attention is currency, your brand’s presence needs to do more than just look good, it needs to resonate, build trust and drive action. At TVG Creative, we blend strategy, design and technology to bring that vision to life. Whether you’re a law firm, reporting agency or professional service business, we help you build a brand that reflects your expertise and moves your business forward.", "From stunning websites to memorable branding and launch-ready identity kits, our creative solutions are built with purpose, customized to your niche, audience and goals.",
+        ],
+      },
+      Provide: {
+        pera: "To ensure you stand out in a crowded market. We craft branding and content that reflects your values and gets you noticed.",
+        tagsLeft: [
+          { icon: "/fruit-citrus.png", text: "Website design & SEO" },
+          { icon: "/fruit-citrus.png", text: "Logo & brand identity kits" },
+          { icon: "/fruit-citrus.png", text: "Social media content & planning" },
+          { icon: "/fruit-citrus.png", text: "Brochures, emailers & digital assets" }, 
+        ],
+        tagsRight: [
+          { icon: "/fruit-citrus.png", text: "Video editing & animation support" },
+          { icon: "/fruit-citrus.png", text: "Ad creatives for digital campaigns" },
+          { icon: "/fruit-citrus.png", text: "Style guide development" },
+          { icon: "/fruit-citrus.png", text: "Event branding and signage design" },
+        ],
+      },
+      TvgEffect: {
+        title:"Service Metrics",
+        pera:"Every brand deserves to stand out, we help you do it with purpose. We turn your values into visuals and ideas into impact.",
+        impactStats: [
+          { number: ">1M", label: "Pages transcribed" },
+          { number: "60%", label: "Faster payroll cycles" },
+          { number: "77%", label: "Fewer missed deadlines" },
+        ],
+      },
+      Overview2: [
+        {
+          icon: "/calendar-icon.png",
+          title: "Website Design & SEO",
+          description:
+            "We create responsive, fast and conversion-optimized websites that reflect your brand and drive results with SEO built in from the start.",
+          classBorder: "md:border-e md:border-b",
+        },
+        {
+          icon: "/calendar-icon.png",
+          title: "Client Billing and Invoicing",
+          description:
+            "We generate accurate invoices, track payments and simplify billing helping you get paid faster and manage cash flow with ease.",
+          classBorder: "md:border-s md:border-b",
+        },
+        {
+          icon: "/calendar-icon.png",
+          title: "Content Marketing Strategy",
+          description:
+            "Engage your audience with content that educates, inspires and positions you as an industry leader across platforms.",
+          classBorder: "md:border-e md:border-t",
+        },
+        {
+          icon: "/calendar-icon.png",
+          title: "Startup Identity Kits",
+          description:
+            "Launch with confidence using complete kits, logos, business cards, email signatures, brochures and more designed for instant credibility.",
+          classBorder: "md:border-s md:border-t",
+        },
+      ],
+    },
   };
 
   const content = data[serviceId];
