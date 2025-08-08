@@ -4,10 +4,10 @@ import OverviewCard from "../../components/OverviewCard";
 
 const ServiceOverview = ({ data }) => {
   return (
-    <section className="bg-gradient-to-br from-[#1e90ff] to-[#1ca9c9] text-white py-20 px-4 md:px-16">
+    <section className="bg-gradient-to-br from-[#1e90ff] to-[#1ca9c9] text-white ">
       <div className="container-fluid">
         <motion.h2
-          className="text-center font-parkinsans text-h2 mb-10"
+          className="text-center font-parkinsans text-h2 md:mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

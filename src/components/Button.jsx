@@ -8,7 +8,7 @@ function Button({text, link, arrowClass,color}) {
       to={link}
       className={`flex gap-1 ${color}`}
     >
-      <div className="text bg-secondary text-xl px-6 leading-[40px] rounded-[50px]">{text}</div>
+      <div className="text bg-secondary text-base leading-10 lg:text-xl px-6 lg:leading-[40px] rounded-[50px]">{text}</div>
       {arrowClass && <Arrow customClass="bg-secondary -rotate-45" />}
     </Link>
   );

@@ -55,7 +55,7 @@ const HeroSection = () => {
       <div className="container-fluid">
         {/* Left Content */}
         <motion.div
-          className="flex justify-between items-end gap-20"
+          className="lg:flex justify-between items-end gap-20"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -65,7 +65,7 @@ const HeroSection = () => {
             Experience You Trust. <br /> Support You Deserve.
           </h1>
           <motion.p
-            className="text-gray-600 mt-6 max-w-[40%] font-manrope text-base"
+            className="text-gray-600 mt-6 lg:max-w-[40%] font-manrope text-base"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,9 +78,9 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Image & Mid Content */}
-        <div className="flex gap-20 items-end mt-10">
+        <div className="md:flex gap-20 items-end mt-10">
           <motion.div
-            className="relative w-[60%]"
+            className="relative md:w-[60%]"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -90,7 +90,7 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            className="w-[40%] flex flex-col justify-end"
+            className="md:w-[40%] flex flex-col justify-end"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -98,7 +98,7 @@ const HeroSection = () => {
           >
             {/* Buttons */}
             <motion.div
-              className="flex gap-4"
+              className="flex gap-4 mt-10 md:mt-0"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}

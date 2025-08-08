@@ -29,7 +29,7 @@ const data = [
 export default function FeaturedHighlights() {
   return (
     <section className="bg-grad  text-white">
-      <div className="container-fluid space-y-16">
+      <div className="container-fluid space-y-10 md:space-y-16">
   {data.map((item, idx) => (
     <div
       key={idx}

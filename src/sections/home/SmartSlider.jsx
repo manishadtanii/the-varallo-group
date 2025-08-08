@@ -102,7 +102,7 @@ function NextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className=" cursor-pointer absolute -bottom-12 right-[calc(50%-3rem)] z-10"
+      className="cursor-pointer absolute -bottom-12 right-[calc(50%-3rem)] z-10"
       onClick={onClick}
     >
       <Arrow customClass={"bg-secondary "} />
@@ -114,7 +114,7 @@ function PrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className=" absolute -bottom-12 left-[calc(50%-3rem)] z-10"
+      className="cursor-pointer absolute -bottom-12 left-[calc(50%-3rem)] z-10"
       onClick={onClick}
     >
       <Arrow customClass={"bg-secondary rotate-180"} />
@@ -138,6 +138,15 @@ export default function SmartSlider() {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          autoplay: true,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
           slidesToShow: 1,
           centerMode: false,
           autoplay: true,
@@ -150,10 +159,10 @@ export default function SmartSlider() {
   return (
     <section className="bg-gradient-to-br from-[#0052B9] to-[#38ABD0] text-white py-20 relative">
       <img src="" alt="" />
-      <div className="container- ps-[100px]">
-        <div className="flex items-stretch">
+      <div className="container- px-[20px] md:px-[25px] lg:ps-[100px]">
+        <div className="lg:flex items-stretch">
           <motion.div
-            className="md:w-[40%] flex flex-col justify-between px-6"
+            className="lg:w-[40%] flex flex-col justify-between px-6 mb-10 lg:mb-0"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -182,7 +191,7 @@ export default function SmartSlider() {
             </motion.div>
 
             <motion.p
-              className="text-white font-manrope text-xl md:max-w-[500px]"
+              className="text-white font-manrope text-xl lg:max-w-[500px]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -197,7 +206,7 @@ export default function SmartSlider() {
           </motion.div>
 
           <motion.div
-            className="md:w-[60%]"
+            className="lg:w-[60%]"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}

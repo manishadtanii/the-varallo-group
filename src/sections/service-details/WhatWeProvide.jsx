@@ -20,7 +20,7 @@ const WhatWeProvide = ({ data }) => {
   };
 
   return (
-    <div className="bg-grad py-[100px] overflow-hidden text-white">
+    <div className="bg-grad py-[50px] md:py-[100px] overflow-hidden text-white">
       <div className="text-center mb-10 px-5">
         <motion.h2
           className="text-h2 font-parkinsans"
