@@ -67,7 +67,7 @@ export default function Footer() {
                   { label: "Services", path: "/services" },
                   { label: "Blogs", path: "/blogs" },
                   { label: "Contact Us", path: "/contact" },
-                  { label: "Legal Policies", path: "/legal" },
+                  // { label: "Legal Policies", path: "/legal" },
                 ].map((item, i) => (
                   <li key={i}>
                     <Link
